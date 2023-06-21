@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MauiApp11.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MauiApp11"
+    Shell.FlyoutBehavior="Flyout">
+
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+
+
+        <ShellContent
+            
+            Title="Home"
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Icon="home.png"
+            Route="MainPage"/>
+        <ShellContent
+            Title="Doviz Kurları"
+            ContentTemplate="{DataTemplate local:DovizKurlu}"
+            Icon="coins.png"
+            Route="DovizKurlu" />
+
+        <ShellContent
+            Title="Haberler"
+            ContentTemplate="{DataTemplate local:Haberler}"
+            Icon="news.png"
+            Route="Haberler" />
+        <ShellContent
+            Title="Hava Durumu"
+            ContentTemplate="{DataTemplate local:Weather}"
+            Icon="cloudy.png"
+            Route="Weather" />
+        
+        <ShellContent
+            Title="Yapılacaklar"
+            ContentTemplate="{DataTemplate local:Yapilacak}"
+            Icon="clipboard.png"
+            Route="Yapilacak" />
+        <ShellContent
+            Title="Ayarlar"
+            ContentTemplate="{DataTemplate local:Settings}"
+            Icon="settings.png"
+            Route="Settings" />
+        
+
+    </FlyoutItem>
+
+
+</Shell>

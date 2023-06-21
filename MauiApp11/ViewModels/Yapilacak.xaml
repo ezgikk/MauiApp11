@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp11.Yapilacak"
+             Title="Yapilacak">
+    <ContentPage.Content>
+        <StackLayout>
+        <Label Text="Görev:" />
+        <Entry x:Name="taskEntry"/>
+
+        <Label Text="Detay:" />
+        <Entry x:Name="detailEntry" />
+
+        <Label Text="Tarih:" />
+        <DatePicker x:Name="datePicker" />
+
+        <Label Text="Saat:" />
+        <TimePicker x:Name="timePicker" />
+
+        <Button Text="Ekle" Clicked="AddTask_Clicked" />
+        <Button Text="Sil" Clicked="DeleteTask_Clicked" />
+        <Button Text="Güncelle" Clicked="UpdateTask_Clicked" />
+
+        <ListView x:Name="taskListView" ItemSelected="TaskListView_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Task}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
